@@ -39,7 +39,7 @@ class App extends React.Component {
             });
           })
           .catch(() => {
-            this.setState({ displayError: "送信できませんでした" });
+            this.setState({ displaySuccess: "送信できませんでした" });
           });
       } else if (!this.state.status) {
         this.setState({
