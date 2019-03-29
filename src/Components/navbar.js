@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import icon_twitter from "../assets/icon_twitter.svg";
 import icon_instagram from "../assets/icon_instagram.svg";
+import logo from '../assets/logo.svg'
 
 const Navigation = () => {
   return (
@@ -10,7 +11,7 @@ const Navigation = () => {
       <div className="navi   grey darken-4">
         <div className="link">
           <Link to="/">
-            <h2>二部写真部</h2>
+            <img className={"logo"} src={logo} alt=""/>
           </Link>
         </div>
 
@@ -48,7 +49,9 @@ const Style = styled.div`
   img {
     height: 20px;
   }
-
+  .logo{
+    height: 30px;
+  }
   h2 {
     display: inline;
   }

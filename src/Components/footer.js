@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="page-footer grey darken-4">
         <div className="footer-copyright">
           <div className="container">
-            <span>© 2019 TDU PHOTO 2</span>
+            <span>© 2019 TDU PHOTO CLUB 2</span>
             <div className={"links"}>
 
               <a
