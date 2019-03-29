@@ -88,32 +88,30 @@ class GalleryPic extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Style>
-          <p className="about">&nbsp;&nbsp;&nbsp;&nbsp;Gallery</p>
+      <Style>
+        <p className="about">&nbsp;&nbsp;&nbsp;&nbsp;Gallery</p>
 
-          <Gallery photos={photos} onClick={this.openLightbox} />
-          <Lightbox
-            images={photos}
-            onClose={this.closeLightbox}
-            onClickPrev={this.gotoPrevious}
-            onClickNext={this.gotoNext}
-            currentImage={this.state.currentImage}
-            isOpen={this.state.lightboxIsOpen}
-          />
-          <div className={"about2"}>
-            <BTN
-              fluid
-              secondary
-              onClick={() => {
-                this.props.history.push("/");
-              }}
-            >
-              戻る
-            </BTN>
-          </div>
-        </Style>
-      </div>
+        <Gallery photos={photos} onClick={this.openLightbox} />
+        <Lightbox
+          images={photos}
+          onClose={this.closeLightbox}
+          onClickPrev={this.gotoPrevious}
+          onClickNext={this.gotoNext}
+          currentImage={this.state.currentImage}
+          isOpen={this.state.lightboxIsOpen}
+        />
+        <div className={"about2"}>
+          <BTN
+            fluid
+            secondary
+            onClick={() => {
+              this.props.history.push("/");
+            }}
+          >
+            戻る
+          </BTN>
+        </div>
+      </Style>
     );
   }
 }
@@ -121,12 +119,11 @@ class GalleryPic extends React.Component {
 export default withRouter(GalleryPic);
 
 const Style = styled.div`
-  margin: 6em 3em 3em;
+  margin: 6em 3em 7em;
   .about2 {
     position: relative;
     font-size: 2em;
-    margin: 1em 0 2em;
-    
+    margin: 1em 0 0em;
   }
   .backButton {
     width: 100vw;
