@@ -63,7 +63,7 @@ const Style = styled.div`
   }
   @media (max-width: 1055px) {
     .right {
-    margin: 10px 2em 0;
+    margin: 10px 2em 1em;
     }
     height: max-content;
   }
