@@ -10,7 +10,7 @@ CSS in JS : [Styled Component](https://www.styled-components.com/)
 
 その他 : [Materialize](https://materializecss.com/) , [Semantic UI](https://react.semantic-ui.com/)
 <hr>
-デザイナー : https://github.com/Katoh-Miku
+Design : https://github.com/Katoh-Miku
 <hr>
 
 Dev :
