@@ -9,3 +9,10 @@ CSS in JS : [Styled Component](https://www.styled-components.com/)
 データベース : [Cloud Firestore](https://firebase.google.com/products/)
 
 その他 : [Materialize](https://materializecss.com/) , [Semantic UI](https://react.semantic-ui.com/)
+
+デザイナー : https://github.com/Katoh-Miku
+
+Dev :
+https://github.com/HayakawaYoshikatsu
+https://github.com/bistrofada 
+https://github.com/falcon78
