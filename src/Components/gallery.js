@@ -125,7 +125,7 @@ const Style = styled.div`
   .about2 {
     position: relative;
     font-size: 2em;
-    margin: 1em 0;
+    margin: 1em 0 2em;
     
   }
   .backButton {
