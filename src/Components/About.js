@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import camera from "../assets/camera.jpg";
 
 const About = () => {
   return (
     <Style>
       <div className="left">
         <h1 className="about">&nbsp;&nbsp; About</h1>
-        <img src={camera} alt="" />
+        <img src="https://i.imgur.com/9L2sblP.jpg" alt="" />
       </div>
       <div className="right">
         <p>部室 : 東京電機大学千住キャンパス３号館３階 </p>
@@ -44,7 +43,6 @@ const Style = styled.div`
     flex-direction: column;
     justify-content: space-between;
     margin: 5em 0 0;
-     
   }
   .left {
     margin: 40px 0;
@@ -83,9 +81,9 @@ const Style = styled.div`
     z-index: 0;
     top: -3px;
   }
-  p{
-  font-size: 1.1em;
-  font-family:  "Sawarabi Gothic", sans-serif;
+  p {
+    font-size: 1.1em;
+    font-family: "Sawarabi Gothic", sans-serif;
   }
 `;
 

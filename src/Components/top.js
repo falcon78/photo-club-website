@@ -37,7 +37,7 @@ const Style = styled.div`
   padding: 0;
   margin: 0;
   font-family: "Libre Baskerville", sans-serif;
-  .buttons{
+  .buttons {
     display: flex;
     justify-content: center;
   }
@@ -45,8 +45,6 @@ const Style = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: url("https://i.imgur.com/Cyt0PY6.jpg");
     height: 60vh;
     background-size: cover;
     background-position: center;

@@ -3,7 +3,6 @@ import Top from "./Components/top";
 import Navigation from "./Components/navbar";
 import styled from "styled-components";
 import About from "./Components/About";
-import GalleryPic from "./Components/gallery";
 import Join from "./Components/join";
 import Footer from "./Components/footer";
 import db from "./Firebase/firebase";
@@ -123,7 +122,7 @@ const Style = styled.div`
   @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
   @import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic");
   @import url("https://fonts.googleapis.com/css?family=Roboto");
-  font-family: "Roboto","Libre Baskerville", "Sawarabi Gothic", sans-serif;
+  font-family: "Roboto", "Libre Baskerville", "Sawarabi Gothic", sans-serif;
   .gallery {
     padding-top: 1em;
     background-color: white;
