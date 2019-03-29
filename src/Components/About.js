@@ -27,22 +27,24 @@ const About = () => {
 
 const Style = styled.div`
   background-color: #232323;
-  height: max-content;
+  width: 100vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   align-content: center;
   margin: 0;
   padding: 0 20px 40px;
   color: white;
   flex-wrap: wrap;
+  
   .right {
     height: 320px;
     width: 460px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 5em 0 0;
+    margin: 5em 2em 0;
+    
   }
   .left {
     margin: 40px 0;
@@ -59,9 +61,9 @@ const Style = styled.div`
       height: auto;
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: 1055px) {
     .right {
-      margin-top: 10px;
+    margin: 10px 2em 0;
     }
     height: max-content;
   }
