@@ -5,23 +5,26 @@ import styled from "styled-components";
 import About from "./Components/About";
 import GalleryPic from "./Components/gallery";
 import Join from "./Components/join";
-
+import Footer from "./Components/footer";
 import db from "./Firebase/firebase";
+import Preview from "./Components/preview";
 
 class App extends React.Component {
   state = {
     number: "",
     status: undefined,
-    displaySuccess: ""
+    displaySuccess: "",
+    isCorrect: false
   };
+
+  regex = /[\d]{2}[a-zA-Z]{2}[\d]{3}/g;
 
   onSubmit = e => {
     e.preventDefault();
-    let regex = /[\d]{2}[a-zA-Z]{2}[\d]{3}/g;
 
     if (
-      this.state.number.match(regex) &&
-      this.state.number.match(regex)[0] === this.state.number
+      this.state.number.match(this.regex) &&
+      this.state.number.match(this.regex)[0] === this.state.number
     ) {
       if (this.state.number && this.state.status) {
         db.collection("UserDetails")
@@ -101,11 +104,10 @@ class App extends React.Component {
             check2={this.onClick2}
             passed={this.state.displaySuccess}
           />
-          <div className="gallery">
-            <div>
-              <GalleryPic />
-            </div>
-          </div>
+
+          <Preview />
+
+          <Footer />
         </Style>
       </Main>
     );
@@ -117,24 +119,15 @@ export default App;
 const Main = styled.div``;
 
 const Style = styled.div`
-  background: url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: cover;
   position: static;
-  @import url("https://fonts.googleapis.com/css?family=Montserrat");
+  @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
   @import url("https://fonts.googleapis.com/css?family=Sawarabi+Gothic");
-  font-family: "Montserrat", "Sawarabi Gothic", sans-serif;
+  @import url("https://fonts.googleapis.com/css?family=Roboto");
+  font-family: "Roboto","Libre Baskerville", "Sawarabi Gothic", sans-serif;
   .gallery {
     padding-top: 1em;
     background-color: white;
     display: flex;
     justify-content: center;
-    div {
-      width: 80vw;
-    }
   }
 `;

@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Join = props => {
   return (
     <Style>
-      <div className="left">
+      <div className="left" >
         <img src={join} alt="join us svg" />
       </div>
       <div className="form">
@@ -50,10 +50,10 @@ const Join = props => {
             onClick={props.click}
             className="waves-effect waves-light btn"
           >
-            送信
+            送信 &nbsp;
+            <i className=" far fa-paper-plane" />
           </button>
           {props.passed && <p>{props.passed}</p>}
-
         </form>
       </div>
     </Style>
@@ -63,12 +63,21 @@ const Join = props => {
 export default Join;
 
 const Style = styled.div`
+  background: url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  p {
+    margin-top: 1em;
+  }
   .form {
     margin-bottom: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 300px;
+    height: max-content;
   }
   .btn {
     margin-top: 1em;
@@ -99,7 +108,7 @@ const Style = styled.div`
   }
   @media (max-width: 732px) {
     h1 {
-      margin-top: 30px;
+      margin: 10px 0;
     }
   }
   .left {
@@ -117,8 +126,7 @@ const Style = styled.div`
     height: auto;
     box-shadow: aliceblue;
   }
-
-  background: transparent;
+  padding: 40px;
   height: max-content;
-  margin: 40px;
+  width: 100vw;
 `;

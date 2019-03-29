@@ -1,26 +1,34 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import icon_twitter from "../assets/icon_twitter.svg";
+import icon_instagram from "../assets/icon_instagram.svg";
 
 const Navigation = () => {
   return (
     <Style>
       <div className="navi   grey darken-4">
-        <h5>二部写真部</h5>
+        <div className="link">
+          <Link to="/">
+            <h2>二部写真部</h2>
+          </Link>
+        </div>
+
         <ul>
           <li>
             <a href="#" target="_blank" rel="noreferrer noopener">
-              <p className="fab fa-instagram" />
+              <img src={icon_instagram} alt="" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#" target="_blank" rel="noreferrer noopener">
+              <img className="twitter" src={icon_twitter} alt="" />
             </a>
           </li>
           <li>
             <a href="#" target="_blank" rel="noreferrer noopener">
               <p className="fab fa-github" />
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" rel="noreferrer noopener">
-              <p className="fab fa-twitter-square" />
             </a>
           </li>
         </ul>
@@ -34,6 +42,19 @@ export default Navigation;
 const Style = styled.div`
   display: flex;
   justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  img {
+    height: 20px;
+  }
+
+  h2 {
+    display: inline;
+  }
+  link {
+    height: max-content;
+  }
   .navi {
     p {
       display: inline;
@@ -41,6 +62,7 @@ const Style = styled.div`
     }
     display: flex;
     justify-content: space-between;
+
     width: 100vw;
     max-width: 1800px;
     ul {

@@ -1,19 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import { Animated } from "react-animated-css";
+import { Button as BTN } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 const Top = () => {
   return (
     <Style>
       <div
+        class="cont"
         style={{
           backgroundImage: "url(" + require("../assets/main.jpg") + ")"
         }}
       >
         <Animated animationIn="fadeInUp">
-          <h1>
-            TDU PHOTO CLUB<span>2</span>
-          </h1>
+          <div className="headercontainer">
+            <h2>TDU PHOTO CLUB</h2>
+            <div class="buttons">
+              <a href="#join">
+                <BTN>&nbsp;&nbsp;&nbsp;&nbsp;Join&nbsp;&nbsp;&nbsp;&nbsp;</BTN>
+              </a>
+              <Link to="/gallery">
+                <BTN>Gallery</BTN>
+              </Link>
+            </div>
+          </div>
         </Animated>
       </div>
     </Style>
@@ -25,34 +36,39 @@ export default Top;
 const Style = styled.div`
   padding: 0;
   margin: 0;
-  font-family: "Montserrat", sans-serif;
-  div {
+  font-family: "Libre Baskerville", sans-serif;
+  .buttons{
+    display: flex;
+    justify-content: center;
+  }
+  .cont {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    //height: 100vh;
+
     background: url(require("/src/assets/main.jpg"));
-
-    height: 100vh;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
+    height: 60vh;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-size: cover;
+
     position: static;
   }
-  h1 {
+  h2 {
     color: white;
+    font-size: 100%;
     text-align: center;
+    margin: 10px;
     font-weight: bold;
-    font-size: 4em;
-    letter-spacing: 10px;
   }
 
   span {
     font-size: 16px;
+  }
+  .headercontainer {
+    font-size: 9.5vw;
+
+    display: flex;
+    flex-direction: column;
   }
 `;

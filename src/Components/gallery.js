@@ -82,7 +82,7 @@ class GalleryPic extends React.Component {
     return (
       <div>
         <Style>
-          <p className="about">&nbsp;&nbsp;&nbsp;Gallery</p>
+          <p className="about">&nbsp;&nbsp;&nbsp;&nbsp;Gallery</p>
 
           <Gallery photos={photos} onClick={this.openLightbox} />
           <Lightbox
@@ -102,7 +102,9 @@ class GalleryPic extends React.Component {
 export default GalleryPic;
 
 const Style = styled.div`
-  margin-top: 20px;
+font-weight: bold;
+margin: 6em 3em 3em;
+  
   .about {
     position: relative;
     font-size: 2em;
@@ -116,5 +118,6 @@ const Style = styled.div`
     height: 1.2em;
     background-color: lightblue;
     z-index: 0;
+    top: -3px;
   }
 `;

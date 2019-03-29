@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Style>
       <div className="left">
-        <p className="about">&nbsp;&nbsp;&nbsp;&nbsp;About</p>
+        <h1 className="about">&nbsp;&nbsp; About</h1>
         <img src={camera} alt="" />
       </div>
       <div className="right">
@@ -18,7 +18,7 @@ const About = () => {
         </p>
         <p>
           写真部はいつでも部員募集中です!
-          <br />
+          <br id="join" />
           カメラを持っていなくても、貸し出し用のカメラを持って、撮影してみよう!!
         </p>
       </div>
@@ -33,17 +33,18 @@ const Style = styled.div`
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  margin: 0 0 20px;
+  margin: 0;
   padding: 0 20px 40px;
   color: white;
   flex-wrap: wrap;
   .right {
-    height: 350px;
+    height: 320px;
     width: 460px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 55px 0px 0;
+    margin: 5em 0 0;
+     
   }
   .left {
     margin: 40px 0;
@@ -68,14 +69,23 @@ const Style = styled.div`
   }
   .about {
     position: relative;
+    margin-bottom: 30px;
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: bold;
   }
   .about::before {
+    margin-top: 4px;
     position: absolute;
     content: "";
     width: 11px;
-    height: 20px;
+    height: 1.2em;
     background-color: lightblue;
-    z-index: 99;
+    z-index: 0;
+    top: -3px;
+  }
+  p{
+  font-size: 1.1em;
+  font-family:  "Sawarabi Gothic", sans-serif;
   }
 `;
 
