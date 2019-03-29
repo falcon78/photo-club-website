@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Gallery from "react-photo-gallery";
 import Lightbox from "react-images";
+import { Button as BTN } from "semantic-ui-react";
+import { withRouter } from "react-router-dom";
 
 const photos = [
   {
@@ -99,16 +101,38 @@ class GalleryPic extends React.Component {
             currentImage={this.state.currentImage}
             isOpen={this.state.lightboxIsOpen}
           />
+          <div className={"about2"}>
+            <BTN
+              fluid
+              secondary
+              onClick={() => {
+                this.props.history.push("/");
+              }}
+            >
+              戻る
+            </BTN>
+          </div>
         </Style>
       </div>
     );
   }
 }
 
-export default GalleryPic;
+export default withRouter(GalleryPic);
 
 const Style = styled.div`
   margin: 6em 3em 3em;
+  .about2 {
+    position: relative;
+    font-size: 2em;
+    margin: 1em 0;
+    
+  }
+  .backButton {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
   p {
     font-family: "Libre Baskerville", sans-serif;
     font-weight: bold;
