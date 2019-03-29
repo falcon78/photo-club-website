@@ -5,23 +5,27 @@ import Lightbox from "react-images";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1511120727971-4eb2d2816935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    src:
+      "https://images.unsplash.com/photo-1511120727971-4eb2d2816935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     width: 4,
     height: 3
   },
 
   {
-    src: "https://images.unsplash.com/photo-1553096537-82ab4c0ae230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
+    src:
+      "https://images.unsplash.com/photo-1553096537-82ab4c0ae230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
     width: 3,
     height: 4
   },
   {
-    src: "https://images.unsplash.com/photo-1516472151647-6900f65d8975?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    src:
+      "https://images.unsplash.com/photo-1516472151647-6900f65d8975?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
     width: 3,
     height: 4
   },
   {
-    src: "https://images.unsplash.com/photo-1553336972-e104649d0554?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    src:
+      "https://images.unsplash.com/photo-1553336972-e104649d0554?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     width: 3,
     height: 4
   },
@@ -36,12 +40,14 @@ const photos = [
     height: 4
   },
   {
-    src: "https://images.unsplash.com/photo-1553136838-4daa421120b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    src:
+      "https://images.unsplash.com/photo-1553136838-4daa421120b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     width: 4,
     height: 3
   },
   {
-    src: "https://images.unsplash.com/photo-1553176772-493c732932da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    src:
+      "https://images.unsplash.com/photo-1553176772-493c732932da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     width: 4,
     height: 3
   }
@@ -102,9 +108,11 @@ class GalleryPic extends React.Component {
 export default GalleryPic;
 
 const Style = styled.div`
-font-weight: bold;
-margin: 6em 3em 3em;
-  
+  margin: 6em 3em 3em;
+  p {
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: bold;
+  }
   .about {
     position: relative;
     font-size: 2em;

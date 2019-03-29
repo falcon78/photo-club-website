@@ -46,7 +46,7 @@ const Style = styled.div`
     justify-content: center;
     align-items: center;
 
-    background: url(require("/src/assets/main.jpg"));
+    background: url("https://i.imgur.com/Cyt0PY6.jpg");
     height: 60vh;
     background-size: cover;
     background-position: center;
