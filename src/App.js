@@ -27,9 +27,10 @@ class App extends React.Component {
     ) {
       if (this.state.number && this.state.status) {
         db.collection("UserDetails")
-          .doc("user")
+          .doc("users")
           .collection("users")
           .add({
+            date: new Date(),
             number: this.state.number,
             status: this.state.status
           })
