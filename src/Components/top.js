@@ -18,10 +18,10 @@ const Top = () => {
             <h2>TDU PHOTO CLUB</h2>
             <div class="buttons">
               <a href="#join">
-                <BTN>&nbsp;&nbsp;&nbsp;&nbsp;Join&nbsp;&nbsp;&nbsp;&nbsp;</BTN>
+                <BTN >&nbsp;Join&nbsp;</BTN>
               </a>
               <Link to="/gallery">
-                <BTN>Gallery</BTN>
+                <BTN secondary>Gallery</BTN>
               </Link>
             </div>
           </div>
@@ -69,4 +69,5 @@ const Style = styled.div`
     display: flex;
     flex-direction: column;
   }
+  
 `;

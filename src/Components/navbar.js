@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import icon_twitter from "../assets/icon_twitter.svg";
 import icon_instagram from "../assets/icon_instagram.svg";
-import logo from '../assets/logo.svg'
+import logo from "../assets/logo.svg";
+import github from "../assets/icon_github.svg";
 
 const Navigation = () => {
   return (
@@ -11,25 +12,25 @@ const Navigation = () => {
       <div className="navi   grey darken-4">
         <div className="link">
           <Link to="/">
-            <img className={"logo"} src={logo} alt=""/>
+            <img className={"logo"} src={logo} alt="" />
           </Link>
         </div>
 
         <ul>
           <li>
-            <a href="#" target="_blank" rel="noreferrer noopener">
+            <a href="https://www.instagram.com/tdu_2photo/" target="_blank" rel="noreferrer noopener">
               <img src={icon_instagram} alt="" />
             </a>
           </li>
 
           <li>
-            <a href="#" target="_blank" rel="noreferrer noopener">
+            <a href="https://twitter.com/dendai_2ndphoto" target="_blank" rel="noreferrer noopener">
               <img className="twitter" src={icon_twitter} alt="" />
             </a>
           </li>
           <li>
-            <a href="#" target="_blank" rel="noreferrer noopener">
-              <p className="fab fa-github" />
+            <a href="https://github.com/tduphotoclub" target="_blank" rel="noreferrer noopener">
+              <img className="github" src={github} alt="" />
             </a>
           </li>
         </ul>
@@ -47,17 +48,21 @@ const Style = styled.div`
   align-items: center;
 
   img {
-    height: 20px;
+    height: 22px;
   }
-  .logo{
+  .twitter{
+    height: 21px;
+  }
+  .github {
+    height: 26px;
+  }
+  .logo {
     height: 30px;
   }
   h2 {
     display: inline;
   }
-  link {
-    height: max-content;
-  }
+  
   .navi {
     p {
       display: inline;
@@ -68,30 +73,25 @@ const Style = styled.div`
 
     width: 100vw;
     max-width: 1800px;
-    ul {
-      text-decoration: none;
-      color: white;
-    }
-    ul:link {
-      color: white;
-    }
+
     padding: 0 10px;
     align-items: center;
   }
 
   ul {
     display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 130px;
   }
-  a {
-    color: white;
-    margin-right: 20px;
-  }
+  
   z-index: 999;
   font-family: "Montserrat", "Sawarabi Gothic", sans-serif;
   position: fixed;
   top: 0;
   width: 100vw;
-  color: white;
+
   font-weight: normal;
   background: #212121;
 `;
