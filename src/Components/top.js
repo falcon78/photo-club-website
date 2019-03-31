@@ -16,7 +16,7 @@ const Top = () => {
         <Animated animationIn="fadeInUp">
           <div className="headercontainer">
             <h2>TDU PHOTO CLUB</h2>
-            <div class="buttons">
+            <div className="buttons">
               <a href="#join">
                 <BTN>&nbsp;Join&nbsp;</BTN>
               </a>

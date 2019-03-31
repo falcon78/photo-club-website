@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Icon } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import gallery from "../assets/gallery.svg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";

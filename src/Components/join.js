@@ -1,7 +1,7 @@
 import React from "react";
 import join from "../assets/join.svg";
 import styled from "styled-components";
-import { Loader, Dimmer } from "semantic-ui-react";
+import { Loader } from "semantic-ui-react";
 
 const Join = props => {
   return (
