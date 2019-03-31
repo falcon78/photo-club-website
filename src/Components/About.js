@@ -63,7 +63,7 @@ const Style = styled.div`
   }
   @media (max-width: 1055px) {
     .right {
-    margin: 10px 2em 1em;
+    margin: 10px 2em 2em;
     }
     height: max-content;
   }
@@ -84,7 +84,7 @@ const Style = styled.div`
     top: -3px;
   }
   p {
-    font-size: 1.1em;
+    
     font-family: "Sawarabi Gothic", sans-serif;
   }
 `;

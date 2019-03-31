@@ -1,11 +1,12 @@
 import React from "react";
 import join from "../assets/join.svg";
 import styled from "styled-components";
+import { Loader, Dimmer } from "semantic-ui-react";
 
 const Join = props => {
   return (
     <Style>
-      <div className="left" >
+      <div className="left">
         <img src={join} alt="join us svg" />
       </div>
       <div className="form">
@@ -53,6 +54,10 @@ const Join = props => {
             送信 &nbsp;
             <i className=" far fa-paper-plane" />
           </button>
+          &nbsp;&nbsp;
+          <div className="loader">
+          <Loader inline active={props.sending} />
+          </div>
           {props.passed && <p>{props.passed}</p>}
         </form>
       </div>
@@ -110,6 +115,11 @@ const Style = styled.div`
     h1 {
       margin: 10px 0;
     }
+  }
+  .loader{
+    margin-top: 1em;
+    
+    
   }
   .left {
     height: 90%;

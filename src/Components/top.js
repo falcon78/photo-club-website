@@ -8,7 +8,7 @@ const Top = () => {
   return (
     <Style>
       <div
-        class="cont"
+        className="cont"
         style={{
           backgroundImage: "url(" + require("../assets/main.jpg") + ")"
         }}
@@ -18,7 +18,7 @@ const Top = () => {
             <h2>TDU PHOTO CLUB</h2>
             <div class="buttons">
               <a href="#join">
-                <BTN >&nbsp;Join&nbsp;</BTN>
+                <BTN>&nbsp;Join&nbsp;</BTN>
               </a>
               <Link to="/gallery">
                 <BTN secondary>Gallery</BTN>
@@ -49,8 +49,6 @@ const Style = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
-    position: static;
   }
   h2 {
     color: white;
@@ -65,9 +63,7 @@ const Style = styled.div`
   }
   .headercontainer {
     font-size: 9.5vw;
-
     display: flex;
     flex-direction: column;
   }
-  
 `;

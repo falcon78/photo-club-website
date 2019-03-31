@@ -7,16 +7,22 @@ import Join from "./Components/join";
 import Footer from "./Components/footer";
 import db from "./Firebase/firebase";
 import Preview from "./Components/preview";
+import firebase from "firebase/app";
 
 class App extends React.Component {
-  state = {
+  initialState = {
     number: "",
     status: undefined,
     displaySuccess: "",
-    isCorrect: false
+    sending : false,
   };
+  state = this.initialState;
 
   regex = /[\d]{2}[a-zA-Z]{2}[\d]{3}/g;
+  docRef = db
+    .collection("UserDetails")
+    .doc("users")
+    .collection("users");
 
   onSubmit = e => {
     e.preventDefault();
@@ -26,23 +32,56 @@ class App extends React.Component {
       this.state.number.match(this.regex)[0] === this.state.number
     ) {
       if (this.state.number && this.state.status) {
-        db.collection("UserDetails")
-          .doc("users")
-          .collection("users")
-          .add({
-            date: new Date(),
-            number: this.state.number,
-            status: this.state.status
-          })
-          .then(() => {
-            this.setState({
-              displaySuccess: "送信しました。ありがとうございます。",
-              number: "",
-              status: ""
-            });
-          })
-          .catch(() => {
-            this.setState({ displaySuccess: "送信できませんでした" });
+        this.setState({
+          sending: true
+        })
+        this.docRef
+          .where("number", "==", this.state.number.toUpperCase())
+          .get()
+          .then(snapshot => {
+            if (snapshot.empty) {
+              db.collection("UserDetails")
+                .doc("users")
+                .collection("users")
+                .add({
+                  date: firebase.firestore.FieldValue.serverTimestamp(),
+                  number: this.state.number.toUpperCase(),
+                  status: this.state.status,
+                  updateCount: 0
+                })
+                .then(() => {
+                  this.setState(this.initialState);
+                  this.setState({
+                    displaySuccess: "送信しました。ありがとうございます。"
+                  });
+                })
+                .catch(() => {
+                  this.setState({ displaySuccess: "送信できませんでした" });
+                });
+            } else {
+              this.setState({
+                sending: true
+              })
+              snapshot.docs.forEach(data => {
+                if (data.data().number === this.state.number.toUpperCase()) {
+                  db.collection("UserDetails")
+                    .doc("users")
+                    .collection("users")
+                    .doc(data.id)
+                    .update({
+                      date: firebase.firestore.FieldValue.serverTimestamp(),
+                      status: this.state.status,
+                      updateCount: data.data().updateCount + 1
+                    })
+                    .then(() => {
+                      this.setState(this.initialState);
+                      this.setState({
+                        displaySuccess: "更新しました。ありがとうございます。"
+                      });
+                    });
+                }
+              });
+            }
           });
       } else if (!this.state.status) {
         this.setState({
@@ -72,21 +111,6 @@ class App extends React.Component {
       number: e.target.value
     });
   };
-  async fetch() {
-    const docRef = db
-      .collection("UserDetails")
-      .doc("user")
-      .collection("users");
-
-    await docRef.get().then(snapshot => {
-      snapshot.docs.forEach(data => {
-        console.log(data.data());
-      });
-    });
-  }
-  /*componentDidMount() {
-    this.fetch();
-  }*/
 
   render() {
     return (
@@ -103,6 +127,7 @@ class App extends React.Component {
             check1={this.onClick1}
             check2={this.onClick2}
             passed={this.state.displaySuccess}
+            sending ={this.state.sending}
           />
 
           <Preview />

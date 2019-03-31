@@ -55,6 +55,7 @@ const Style = styled.div`
   }
   .github {
     height: 26px;
+    margin-right: 10px;
   }
   .logo {
     height: 30px;
