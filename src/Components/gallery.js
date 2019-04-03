@@ -7,52 +7,110 @@ import { withRouter } from "react-router-dom";
 
 const photos = [
   {
-    src:
-      "https://images.unsplash.com/photo-1511120727971-4eb2d2816935?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    width: 4,
+    src: "https://i.imgur.com/TaPRvmE.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/vyMdW2B.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/eTmv8vP.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/ZoomGPM.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/k5QNDDu.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/FgCSngN.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/9ibtiF0.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/6XzIaVJ.jpg",
+    width: 2,
     height: 3
   },
-
   {
-    src:
-      "https://images.unsplash.com/photo-1553096537-82ab4c0ae230?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
+    src: "https://i.imgur.com/MrKfuBG.jpg",
     width: 3,
-    height: 4
+    height: 2
   },
   {
-    src:
-      "https://images.unsplash.com/photo-1516472151647-6900f65d8975?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+    src: "https://i.imgur.com/XZY2tMS.jpg",
     width: 3,
-    height: 4
+    height: 2
   },
   {
-    src:
-      "https://images.unsplash.com/photo-1553336972-e104649d0554?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    src: "https://i.imgur.com/SgT1Ldc.jpg",
     width: 3,
-    height: 4
+    height: 2
   },
   {
-    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
-    width: 4,
-    height: 3
-  },
-  {
-    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+    src: "https://i.imgur.com/y1XWDxs.jpg",
     width: 3,
-    height: 4
+    height: 2
   },
   {
-    src:
-      "https://images.unsplash.com/photo-1553136838-4daa421120b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    width: 4,
-    height: 3
+    src: "https://i.imgur.com/22y7kfQ.jpg",
+    width: 3,
+    height: 2
   },
   {
-    src:
-      "https://images.unsplash.com/photo-1553176772-493c732932da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    width: 4,
-    height: 3
-  }
+    src: "https://i.imgur.com/k4cY9k7.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/uTW0H4x.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/EWuDW27.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/ddlnSOj.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/7l3lG2z.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/zv0Xglb.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/dgwEA10.jpg",
+    width: 3,
+    height: 2
+  },
+  {
+    src: "https://i.imgur.com/wnAd4U5.jpg",
+    width: 3,
+    height: 2
+  },
 ];
 
 class GalleryPic extends React.Component {
